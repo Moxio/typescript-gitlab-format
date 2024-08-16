@@ -21,5 +21,9 @@ text(process.stdin).then((stdIn) => {
 		output = filter(output, new RegExp(options.exclude));
 	}
 
+	if (output.length > 0) {
+		process.exitCode = 1;
+	}
+
 	process.stdout.write(JSON.stringify(output));
 });
