@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { Command } from "commander";
-import getStdin from "get-stdin";
+import { text } from "node:stream/consumers";
 import format from "./format";
 import filter from "./filter";
 
@@ -14,7 +14,7 @@ program
 program.parse(process.argv);
 const options = program.opts();
 
-getStdin().then((stdIn) => {
+text(process.stdin).then((stdIn) => {
 	let output = format(stdIn);
 
 	if (options.exclude) {
