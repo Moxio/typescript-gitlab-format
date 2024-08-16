@@ -21,5 +21,5 @@ text(process.stdin).then((stdIn) => {
 		output = filter(output, new RegExp(options.exclude));
 	}
 
-	console.log(output);
+	process.stdout.write(JSON.stringify(output));
 });
