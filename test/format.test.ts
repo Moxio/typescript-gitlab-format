@@ -10,6 +10,7 @@ describe("format", () => {
 				],
 				"check_name": "TS7006",
 				"description": " Parameter 'node' implicitly has an 'any' type.\n",
+				"fingerprint": "20066f3363e75e58f37a5d94dc4b2e833e31166d7be38fa3e3e13788ff644747",
 				"location": {
 					"path": "node_modules/example/example.d.ts",
 					"positions": {
@@ -32,6 +33,7 @@ describe("format", () => {
 				],
 				"check_name": "TS7006",
 				"description": " Parameter 'node' implicitly has an 'any' type.\n",
+				"fingerprint": "e76aa9fe395c5050ed3cc53bb4ee5d12c3d15afadb361a436a8db8bd1f42670e",
 				"location": {
 					"path": "example/example.d.ts",
 					"positions": {
