@@ -24,7 +24,7 @@ Usage
 -----
 From the command line you can run this command
 ```
-./node_modules/.bin/tsc --project ./tsconfig.json --noEmit | ./node_modules/.bin/typescript-gitlab-format -e [exclude regex] > build-logs/typescript-error.json"
+(./node_modules/.bin/tsc --project ./tsconfig.json --noEmit || true) | ./node_modules/.bin/typescript-gitlab-format -e [exclude regex] > build-logs/typescript-error.json
 ```
 There is one optional command line argument:
 
@@ -46,7 +46,7 @@ Given tsc output that produces errors in these files:
 - `example/example.d.ts`
 
 Running this command:
-`./node_modules/.bin/tsc --project ./tsconfig.json --noEmit | ./node_modules/.bin/typescript-gitlab-format -e "node_modules\\/" > build-logs/typescript-error.json"`
+`(./node_modules/.bin/tsc --project ./tsconfig.json --noEmit || true) | ./node_modules/.bin/typescript-gitlab-format -e "node_modules\\/" > build-logs/typescript-error.json`
 
 Will result in a file with these rules:
 ```json
