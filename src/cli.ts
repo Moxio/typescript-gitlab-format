@@ -25,5 +25,5 @@ text(process.stdin).then((stdIn) => {
 		process.exitCode = 1;
 	}
 
-	process.stdout.write(JSON.stringify(output));
+	process.stdout.write(JSON.stringify(output, null, "\t"));
 });
