@@ -3,6 +3,7 @@ import { Issue } from 'codeclimate-types';
 import { createHash } from "node:crypto";
 
 export default function format (input: string): Issue[] {
+	input = input.replace(/\r/, "");
 	const foo: GrammarItem[] = parse(input);
 
 	return foo.map((inputItem) => {
