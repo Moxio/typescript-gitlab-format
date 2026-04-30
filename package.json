@@ -38,9 +38,9 @@
 		"ts-node": "^10.2.1"
 	},
 	"dependencies": {
-		"commander": "^14.0.3",
-		"typescript": "^5.9.3",
 		"@aivenio/tsc-output-parser": "^2.1.1",
-		"codeclimate-types": "^0.3.1"
+		"codeclimate-types": "^0.3.1",
+		"commander": "^14.0.3",
+		"typescript": "^6.0.3"
 	}
 }
